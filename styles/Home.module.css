@@ -1,0 +1,104 @@
+.homePage {
+  padding-block: 2rem 5rem;
+}
+
+.homePage h1 {
+  text-transform: capitalize;
+  text-align: center;
+  color: #9a9ec9;
+  font-size: 2.4rem;
+  background: -webkit-linear-gradient(0deg, #b0b1d4, #d98d8d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recentlyViewed {
+  margin-top: 3rem;
+}
+.homePage h3 {
+  width: fit-content;
+  margin-block: 3rem 1.5rem;
+  color: var(--color-darkblue-2);
+}
+
+.homePage h3::after {
+  content: '';
+  background-color: #e6c9c9;
+  background-color: #d7d7e1;
+  height: 2px;
+  width: 70%;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.keepLists {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 1.3rem;
+}
+
+.keep {
+  font-size: 2rem;
+  padding: 0.7em 0.4em;
+  border-radius: 0.4rem;
+  color: var(--color-black-1);
+  background-color: var(--color-keepwhite);
+  border-bottom: 1px solid var(--color-darkblue);
+}
+
+.noData {
+  color: var(--color-nodata);
+}
+
+/* Share Data */
+.btnDiv {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.btnDiv > * {
+  font-size: 1.8rem;
+  padding-block: 0.3em;
+  width: 10rem;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+
+.btnDiv button {
+  background-color: var(--color-blue-1);
+}
+
+.btnDiv a {
+  background-color: var(--color-cancel);
+  color: var(--color-content);
+}
+.shareP {
+  color: var(--color-lightblue);
+}
+
+.shareData {
+  padding: 0.4em;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  color: var(--color-black-1);
+  background-color: var(--color-keepwhite);
+  margin-block: 1rem;
+  word-wrap: break-word;
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+/* Media Query */
+
+@media screen and (min-width: 1280px) {
+  .homePage {
+    padding: 0 0 5rem 40rem;
+    margin-top: -3rem;
+  }
+  .keepLists {
+    grid-template-columns: 1fr 1fr;
+  }
+  .homePage h1 {
+    font-size: 3.3rem;
+  }
+}

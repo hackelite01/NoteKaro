@@ -1,0 +1,221 @@
+:root {
+  --color-white: #edf2f4;
+  --color-fullwhite: #ffffff;
+  --color-keepwhite: #ffffff;
+  --color-fullblack: #000000;
+  --color-black-1: #141414;
+  --color-red-1: #d90429;
+  --color-red-3: #cb0018;
+  --color-blue-1: #4b56d2;
+  --color-darkblue: #2b2d42;
+  --color-lightblue: #8d99ae;
+  --color-darkblue-2: #515f77;
+  --nav-shadow: 0 -2px 15px #0000004d;
+  --color-keepread: #e6e5e4;
+  --color-content: #224656;
+  --color-inputborder: #c3c3c3;
+  --color-inputborder-active: #615cc1;
+  --color-toolbarborder: #b1b1b4;
+  --color-modebg: #dde3f9;
+  --color-mode: #2b2d42;
+  --color-keeping: #008073;
+  --color-nodata: #a8a9b3;
+
+  --color-cancel: #e4e4e4;
+  --gradient-sidenav: linear-gradient(to left, #ffffff 15%, #ffffff4d 100%);
+}
+
+[data-theme='dark'] {
+  --color-white: #202023;
+  --color-fullwhite: #000000;
+  --color-keepwhite: #29292f;
+  --color-keepread: #18191b;
+  --color-fullblack: #e4e4e4;
+  --color-black-1: #b4b4b4;
+  --color-red-1: #bb203b;
+  --color-red-3: #ae1a2b;
+  --color-blue-1: #4950a3;
+  --color-darkblue: #989ba4;
+  --color-darkblue-2: #8895ac;
+  --color-content: #989fa3;
+  --color-inputborder: #565252;
+  --color-toolbarborder: #48484a;
+  --color-inputborder-active: #a8a8a8;
+  --color-modebg: #3b3c46;
+  --color-mode: #bebec2;
+  --color-keeping: #3e746f;
+  --color-nodata: #49494e;
+  --color-cancel: #252525;
+  --gradient-sidenav: linear-gradient(to left, #000000, #0c0c0c4d);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  /* scroll-margin-top: 6.6rem; */
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body,
+#__next {
+  height: 100%;
+}
+main {
+  /* min-height: 100%; */
+  height: inherit;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-white);
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Default font size for REM */
+h1 {
+  font-size: 3.3rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 2.24rem;
+}
+
+h4,
+p {
+  font-size: 1.7rem;
+}
+strong {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1.9rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.notfound {
+  min-height: calc(100% - 6.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.notfound h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-darkblue);
+}
+
+.notfound a {
+  font-size: 2rem;
+  color: var(--color-blue-1);
+}
+
+/* Media Query */
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    max-width: 1400px;
+  }
+  main {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  :root {
+    --gradient-sidenav: linear-gradient(to left, #edf2f4, #edf2f451);
+  }
+
+  [data-theme='dark'] {
+    --gradient-sidenav: linear-gradient(to left, #202023, #2020234d);
+  }
+}
